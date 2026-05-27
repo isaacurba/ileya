@@ -101,12 +101,20 @@ public class BookSuggestionSystem {
                     System.out.println("Book for the day:");
                     
                     BookSuggestion suggestion = getSuggestion();
+                    boolean inSuggestion = true;
                     
-                    System.out.print("\t Book title: ");
-                    System.out.println(suggestion.title());
-                    System.out.print("\t Page: ");
-                    System.out.println(suggestion.page());
-                    System.out.println();
+                    while (inSuggestion){
+                        System.out.print("\t Book title: ");
+                        System.out.println(suggestion.title());
+                        System.out.print("\t Page: ");
+                        System.out.println(suggestion.page());
+                        System.out.println();
+                        
+                        System.out.print("Would you like to get another suggestion (yes or no): ");
+                        String anotherSuggestion = input.nextLine();
+                        if(anotherSuggestion.equalsIgnoreCase("yes"))continue;
+                        else break;
+                    }
                     break;
                     
                 case 2:
