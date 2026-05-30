@@ -60,13 +60,13 @@ public class BookSuggestionSystem {
     }
     
     public static String allBooks() {
+    
         StringBuilder result = new StringBuilder();
+        
         for (int index = 0; index < books.size(); index++) {
-            result.append((index + 1) + ". " + books.get(index));
-            
-            if (index < books.size() - 1) {
-                result.append("\n");
-            }
+        
+            result.append((index + 1) + ". " + books.get(index) + "\n");
+ 
         }
         return result.toString();
     }

@@ -92,8 +92,8 @@ public class BookSuggestionSystemTest {
         BookSuggestionSystem.books.clear();
         BookSuggestionSystem.books.add(book.toLowerCase());
         String expected = "1. grey anatomy";
-        
-        assertEquals("1. " + book, BookSuggestionSystem.allBooks());
+        String actual = BookSuggestionSystem.allBooks();
+        assertEquals(expected, actual);
     }
     
     
