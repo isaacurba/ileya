@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class BookSuggestionSystem {
     
     public static ArrayList<String> books = new ArrayList<>();
+    books.add("alice in borderland");
     
     public static String addBook(String title){
         String lowerTitle = title.toLowerCase();
@@ -12,7 +13,6 @@ public class BookSuggestionSystem {
             return "book already exist";
         }
         books.add(lowerTitle);
-        
         return "book added successfully";
     }
     
@@ -24,7 +24,6 @@ public class BookSuggestionSystem {
             books.remove(lowerTitle);
             return "book removed successfully";
         }
-        
         return "books does not exist";
     }
     
@@ -36,7 +35,7 @@ public class BookSuggestionSystem {
         String lowerTitleUpdate =  update.toLowerCase();
         
         for (int index = 0; index < books.size(); index++){
-            if (books.get(index).equals(lowerTitle)){
+            if (books.get(index).equals(lowerTitle)){   
                 books.set(index, lowerTitleUpdate);
                 message = "book updated successfully";
             }
@@ -66,7 +65,6 @@ public class BookSuggestionSystem {
         for (int index = 0; index < books.size(); index++) {
         
             result.append((index + 1) + ". " + books.get(index) + "\n");
- 
         }
         return result.toString();
     }

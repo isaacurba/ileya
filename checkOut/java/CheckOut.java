@@ -8,8 +8,8 @@ public class CheckOut {
     public static void main(String... vivien){
         Scanner input = new Scanner(System.in);
         LocalDateTime dateTime = LocalDateTime.now(); 
-        DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-         String newDateTime = dateTime.format(formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String newDateTime = dateTime.format(formatter);
          
          
          
@@ -87,7 +87,8 @@ public class CheckOut {
         }
         
         System.out.println();
-        System.out.println();  System.out.println("------------------------------------------------------------");
+        System.out.println();
+        System.out.println("------------------------------------------------------------");
         
         System.out.printf("%23s: %20.2f%n", "Sub Total", subTotal);
         System.out.printf("%23s: %20.2f%n", "Discount", discountAmt);
@@ -95,7 +96,7 @@ public class CheckOut {
         System.out.println("===========================================================");
         
         System.out.printf("%23s: %20.2f%n", "Bill Total", subTotal);
-         System.out.println("===========================================================");
+        System.out.println("===========================================================");
 
         System.out.printf("   THIS IS NOT A RECEIPT KINDLY PAY %.2f%n", subTotal);
         

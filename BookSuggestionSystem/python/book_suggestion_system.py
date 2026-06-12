@@ -22,7 +22,7 @@ def update_book(title, update):
     lower_title = title.lower()
     lower_update = update.lower()
     if lower_title in library:
-        index = library.index(title)
+        index = library.index(lower_title)
         library[index] = lower_update
         return "book updated successfully"
     return "book does not exist to be updated"
